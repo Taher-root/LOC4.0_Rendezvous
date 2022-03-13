@@ -1,0 +1,405 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Pavitra NGO</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+   <link rel="icon" href="static/favicon.ico">
+
+ <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin="">
+ </script>
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+   {% comment %} <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+ integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+ crossorigin="">
+</script> {% endcomment %}
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <section class="colored-section" id="title">
+
+    <div class="container-fluid">
+
+      <!-- Nav Bar -->
+
+      <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <a class="navbar-brand" href="">Pavitra</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pricing">Donation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Maps">Maps</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#cta">Sign out</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:8000/dash" >Taher</a>
+            </li>
+
+          </ul>
+
+        </div>
+      </nav>
+
+
+      <!-- Title -->
+
+      <div class="row">
+
+        <div class="col-lg-6">
+          <h1 class="big-heading">Successful people always see things working out.</h1>
+          <!--button type="button" class="btn btn-dark btn-lg download-button" href="javascript:void(0)" onclick="openLoginModal();"> Login</button>
+          <button type="button" class="btn btn-outline-light btn-lg download-button"></i> Register</button-->
+        </div>
+
+        <div class="col-lg-6">
+          <img class="title-image" src="static/images/Holdinghands.png" alt="Holding-hands">
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Features -->
+
+  <section class="white-section" id="features">
+
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-check-circle fa-4x"></i>
+          <h3 class="feature-title">Easy to use.</h3>
+          <p>So easy to use, even your dog could do it.</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-bullseye fa-4x"></i>
+          <h3 class="feature-title">No Processing Fees</h3>
+          <p>No processing fees so all your goodwill goes to someone in need.</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-heart fa-4x"></i>
+          <h3 class="feature-title">Guaranteed to work.</h3>
+          <p>Will work for you even in the remotest corner of the world.</p>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <!-- Objectives -->
+
+  <section class="colored-section" id="testimonials">
+
+    <div id="testimonial-carousel" class="carousel slide" data-ride="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active container-fluid">
+          <h2 class="testimonial-text">Make sure that our outreach reaches each and every part of the globe.</h2>
+          <img class="testimonial-image" src="static/images/Globe.jpg" alt="Globe">
+          <em>Outreach</em>
+        </div>
+        <div class="carousel-item container-fluid">
+          <h2 class="testimonial-text">Make sure that the organization is self sufficient so there is no processing fees.</h2>
+          <img class="testimonial-image" src="static/images/Dollar.png" alt="Money">
+          <em>Finance</em>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+
+  </section>
+
+  <section class="colored-section" id="press">
+    <img class="press-logo" src="static/images/ACM.png" alt="ACM-logo">
+    <img class="press-logo" src="static/images/tnw.png" alt="tnw-logo">
+    <img class="press-logo" src="static/images/bizinsider.png" alt="biz-insider-logo">
+    <img class="press-logo" src="static/images/mashable.png" alt="mashable-logo">
+
+  </section>
+  <!-- Press
+
+  <section class="colored-section" id="press">
+    <img class="press-logo" src="images/techcrunch.png" alt="tc-logo">
+    <img class="press-logo" src="images/tnw.png" alt="tnw-logo">
+    <img class="press-logo" src="images/bizinsider.png" alt="biz-insider-logo">
+    <img class="press-logo" src="images/mashable.png" alt="mashable-logo">
+
+  </section-->
+  <script src="static/assets/js/core/jquery.min.js"></script>
+  <script src="static/assets/js/core/popper.min.js"></script>
+  <script src="static/assets/js/core/bootstrap.min.js"></script>
+  <script src="static/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!-- Map -->
+  <section id="Maps">
+  <div id="map">
+    <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9933.262604240725!2d-0.1359361587921581!3d51.50742477416081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604ce37bbdb95%3A0x5120415568fd2d8b!2sCentral%20London%2C%20London%20SW1A%202DR%2C%20UK!5e0!3m2!1sen!2sin!4v1647146802154!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe><p>
+  </div>
+
+  
+  
+  <!--script>
+//   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={pk.eyJ1IjoidGFoZXJrIiwiYSI6ImNsMG56eG5uYTBjYWEzaW50YWhyajZkaDQifQ.E-KnXPSwcbu1f7g8L6GVjA}', {
+//   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+//   maxZoom: 18,
+//   id: 'mapbox/streets-v11',
+//   tileSize: 512,
+//   zoomOffset: -1,
+//   accessToken: 'pk.eyJ1IjoidGFoZXJrIiwiYSI6ImNsMG56eG5uYTBjYWEzaW50YWhyajZkaDQifQ.E-KnXPSwcbu1f7g8L6GVjA'
+// }).addTo(map);
+// var marker = L.marker([51.5, -0.09]).addTo(map);
+// var circle = L.circle([51.508, -0.11], {
+//     color: 'red',
+//     fillColor: '#f03',
+//     fillOpacity: 0.5,
+//     radius: 500
+// }).addTo(map);
+var map = L.map('map').setView([51.505, -0.09], 13);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+ L.marker([51.5, -0.09]).addTo(map).bindPopup(
+    'Pavitra Head Office'
+ ).openPopup();
+  </script-->
+  </section>
+  
+  <script src="static/assets/js/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="static/assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="static/assets/js/black-dashboard.min.js?v=1.0.0"></script><!-- Black Dashboard DEMO methods, don't include it in your project! -->
+  <script src="static/assets/demo/demo.js"></script>
+  <!-- Donate -->
+
+  <section class="white-section" id="pricing">
+
+    <h2 class="section-heading">A way for each wallet however big/small to do good</h2>
+    <p>Simple and easy way to spread good karma in the world.</p>
+
+    <div class="row">
+
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>Donate your time</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">Free</h2>
+            <p></p>
+            <p>No need for money</p>
+            <p>Just donate your time</p>
+            <a href="https://forms.gle/BE2kRZrM8iFTQRpG8"><button  class="btn btn-lg btn-block btn-outline-dark" type="button">Donate</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>One time donation</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">$</h2>
+            <p>One time donation</p>
+            <p>Will show how the money is used</p>
+            <p>Direct contact with the process</p>
+            <!--input type="number" id="amountZap" ><br><br-->
+            <!--input type="submit" value="Submit"-->
+            <button id="rzp-button2" class="btn btn-lg btn-block btn-dark" type="button">Donate</button>
+            <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+            <script>
+            //var input = document.getElementById("amountZap").value;
+            var options = {    "key": "rzp_test_wCjb5dRk1F1Sfi", // Enter the Key ID generated from the Dashboard
+            "amount":"50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+            "currency": "INR",
+            "name": "Pavitra",
+            "description": "Test Transaction",
+            //"image": "https://drive.google.com/file/d/1ancCNZvEOwpm2uBTPY-ZkkH0ahc-F0EX/view?usp=sharing",
+            "order_id": "order_J6HCrkjxdn6vC5", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+            "handler": function (response){
+                alert(response.razorpay_payment_id);
+                alert(response.razorpay_order_id);
+                alert(response.razorpay_signature)
+            },
+            "prefill": {
+                "name": "Gaurav Kumar",
+                "email": "gaurav.kumar@example.com",
+                "contact": "9999999999"
+            },
+            "notes": {
+                "address": "Razorpay Corporate Office"
+            },
+            "theme": {
+                   "color": "#3399cc"
+            }
+            };
+            var rzp1 = new Razorpay(options);rzp1.on('payment.failed', function (response){
+                        alert(response.error.code);
+                        alert(response.error.description);
+                        alert(response.error.source);
+                        alert(response.error.step);
+                        alert(response.error.reason);
+                        alert(response.error.metadata.order_id);
+                        alert(response.error.metadata.payment_id);
+            });
+            document.getElementById('rzp-button2').onclick = function(e){
+                rzp1.open();
+                e.preventDefault();
+            }
+            </script>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-column col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h3>Per month</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">$ / mo</h2>
+            <!--p>Priority listing</p-->
+            <p>Donation every month</p>
+            <p>Will show how the money is used</p>
+            <p>Direct contact with the process</p>
+            <button id="rzp-button3" class="btn btn-lg btn-block btn-dark" type="button">Donate</button>
+            <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+            <script>
+            var options = {    "key": "rzp_test_wCjb5dRk1F1Sfi", // Enter the Key ID generated from the Dashboard
+            "amount": 50000, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+            "currency": "INR",
+            "name": "Pavitra",
+            "description": "Test Transaction",
+            //"image": "https://drive.google.com/file/d/1ancCNZvEOwpm2uBTPY-ZkkH0ahc-F0EX/view?usp=sharing",
+            "order_id": "order_J6NLGtoslIYWnM", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+            "handler": function (response){
+                alert(response.razorpay_payment_id);
+                alert(response.razorpay_order_id);
+                alert(response.razorpay_signature)
+            },
+            "prefill": {
+                "name": "Gaurav Kumar",
+                "email": "gaurav.kumar@example.com",
+                "contact": "9999999999"
+            },
+            "notes": {
+                "address": "Razorpay Corporate Office"
+            },
+            "theme": {
+                   "color": "#3399cc"
+            }
+            };
+            var rzp1 = new Razorpay(options);rzp1.on('payment.failed', function (response){
+                        alert(response.error.code);
+                        alert(response.error.description);
+                        alert(response.error.source);
+                        alert(response.error.step);
+                        alert(response.error.reason);
+                        alert(response.error.metadata.order_id);
+                        alert(response.error.metadata.payment_id);
+            });
+            document.getElementById('rzp-button3').onclick = function(e){
+                rzp1.open();
+                e.preventDefault();
+            }
+            </script>
+
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </section>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+
+  <!-- Call to Action -->
+
+  <section class="colored-section" id="cta">
+
+    <div class="container-fluid">
+
+      <h3 class="big-heading">Donate more to make them whole.</h3>
+      <a  href="http://127.0.0.1:8000/">
+        <input class="download-button btn btn-lg btn-dark" type="button" value="SIGN OUT" >
+    </a>
+      <!--button class="download-button btn btn-lg brn-light" type="button"><i class="fab fa-google-play"></i> Download</button-->
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer class="white-section" id="footer">
+    <div class="container-fluid">
+      <!--i class="social-icon fab fa-facebook-f"></i-->
+      <a href="https://facebook.com/"><i class="social-icon fab fa-facebook-f"></i></a>
+      <!--i class="social-icon fab fa-twitter"></i-->
+      <a href="https://twitter.com/"><i class="social-icon fab fa-twitter"></i></a>
+      <!--i class="social-icon fab fa-instagram"></i-->
+      <a href="https://instagram.com/"><i class="social-icon fab fa-instagram"></i></a>
+      <!--i class="social-icon fas fa-envelope"></i-->
+      <a href="https://Gmail.com/"><i class="social-icon fas fa-envelope"></i></a>
+      <p>© Copyright 2022 Pavitra</p>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

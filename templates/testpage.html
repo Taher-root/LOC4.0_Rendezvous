@@ -1,10 +1,10 @@
 {% load static %}
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
 <head>
-    <title>NGO</title>
-    
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Pavitra NGO</title>
+
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
@@ -14,8 +14,9 @@
 
   <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
 
+  <link rel="icon" href="static/favicon.ico">
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
   <!-- Font Awesome -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
@@ -23,6 +24,7 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -31,11 +33,11 @@
 
     <div class="container-fluid">
 
-      <!-- Nav Bar -->
+      <!-- Nav Bar-->
 
-      <nav class="navbar navbar-expand-lg navbar-dark">
+      <!--nav class="navbar navbar-expand-lg navbar-dark">
 
-        <a class="navbar-brand" href="">NGO</a>
+        <a class="navbar-brand" href="">Pavitra</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
             <span class="navbar-toggler-icon"></span>
@@ -56,7 +58,8 @@
           </ul>
 
         </div>
-      </nav>
+      </nav-->
+
 
 
       <!-- Title -->
@@ -95,14 +98,14 @@
 
         <div class="feature-box col-lg-4">
           <i class="icon fas fa-bullseye fa-4x"></i>
-          <h3 class="feature-title">Elite Clientele</h3>
-          <p>We have all the dogs, the greatest dogs.</p>
+          <h3 class="feature-title">No Processing Fees</h3>
+          <p>No processing fees so all your goodwill goes to someone in need.</p>
         </div>
 
         <div class="feature-box col-lg-4">
           <i class="icon fas fa-heart fa-4x"></i>
           <h3 class="feature-title">Guaranteed to work.</h3>
-          <p>Find the love of your dog's life or your money back.</p>
+          <p>Will work for you even in the remotest corner of the world.</p>
         </div>
       </div>
 
@@ -118,12 +121,12 @@
     <div id="testimonial-carousel" class="carousel slide" data-ride="false">
       <div class="carousel-inner">
         <div class="carousel-item active container-fluid">
-          <h2 class="testimonial-text">I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
-          <img class="testimonial-image" src="static/images/dog-img.jpg" alt="dog-profile">
+          <h2 class="testimonial-text">After having the opportunity to work with the Pavitra team , I would like to express what a great job they are doing.I wish the team all the best and success in their future endeavours.</h2>
+          <img class="testimonial-image" src="static/images/BM.png" alt="dog-profile">
           <em>Pebbles, New York</em>
         </div>
         <div class="carousel-item container-fluid">
-          <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
+          <h2 class="testimonial-text">It has always been pleasure to work with Pavitra. I have been working with Pavitra from past 2 years.Be it children,or women,there is always Pavitra to help</h2>
           <img class="testimonial-image" src="static/images/lady-img.jpg" alt="lady-profile">
           <em>Beverly, Illinois</em>
         </div>
@@ -142,7 +145,7 @@
   <!-- Press -->
 
   <section class="colored-section" id="press">
-    <img class="press-logo" src="static/images/techcrunch.png" alt="tc-logo">
+    <img class="press-logo" src="static/images/ACM.png" alt="ACM-logo">
     <img class="press-logo" src="static/images/tnw.png" alt="tnw-logo">
     <img class="press-logo" src="static/images/bizinsider.png" alt="biz-insider-logo">
     <img class="press-logo" src="static/images/mashable.png" alt="mashable-logo">
@@ -150,7 +153,7 @@
   </section>
 
 
-  <!-- Pricing -->
+  <!-- Pricing
 
   <section class="white-section" id="pricing">
 
@@ -211,9 +214,10 @@
     </div>
 
   </section>
+  -->
 
 
-  <!-- Call to Action -->
+  <!-- Call to Action
 
   <section class="colored-section" id="cta">
 
@@ -224,9 +228,10 @@
       <button class="download-button btn btn-lg brn-light" type="button"><i class="fab fa-google-play"></i> Download</button>
     </div>
   </section>
+  -->
 
 
-  <!-- Footer -->
+  <!-- Footer
 
   <footer class="white-section" id="footer">
     <div class="container-fluid">
@@ -234,12 +239,25 @@
       <i class="social-icon fab fa-twitter"></i>
       <i class="social-icon fab fa-instagram"></i>
       <i class="social-icon fas fa-envelope"></i>
-      <p>© Copyright 2022 NGO</p>
+      <p>© Copyright 2022 Pavitra</p>
+    </div>
+  </footer-->
+
+  <footer class="white-section" id="footer">
+    <div class="container-fluid">
+      <!--i class="social-icon fab fa-facebook-f"></i-->
+      <a href="https://facebook.com/"><i class="social-icon fab fa-facebook-f"></i></a>
+      <!--i class="social-icon fab fa-twitter"></i-->
+      <a href="https://twitter.com/"><i class="social-icon fab fa-twitter"></i></a>
+      <!--i class="social-icon fab fa-instagram"></i-->
+      <a href="https://instagram.com/"><i class="social-icon fab fa-instagram"></i></a>
+      <!--i class="social-icon fas fa-envelope"></i-->
+      <a href="https://Gmail.com/"><i class="social-icon fas fa-envelope"></i></a>
+      <p>© Copyright 2022 Pavitra</p>
     </div>
   </footer>
 
 
-	<style>body{padding-top: 60px;}</style>
 
     <link href="static/assets/css/bootstrap.css" rel="stylesheet" />
 
@@ -258,12 +276,12 @@
     		      <div class="modal-content">
     		         <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title">Login with</h4>
+                        <!--h4 class="modal-title">Login with</h4-->
                     </div>
                     <div class="modal-body">
                         <div class="box">
                              <div class="content">
-                                <div class="social">
+                                <!--div class="social">
                                     <a class="circle github" href="#">
                                         <i class="fa fa-github fa-fw"></i>
                                     </a>
@@ -278,13 +296,15 @@
                                     <div class="line l"></div>
                                       <span>or</span>
                                     <div class="line r"></div>
-                                </div>
+                                </div-->
                                 <div class="error"></div>
                                 <div class="form loginBox">
                                     <form method="" action="" accept-charset="UTF-8">
                                     <input id="email" class="form-control" type="text" placeholder="Email" name="email">
                                     <input id="password" class="form-control" type="password" placeholder="Password" name="password">
-                                    <input class="btn btn-default btn-login" type="button" value="Login" onclick="loginAjax()">
+                                    <a  href="http://127.0.0.1:8000/after">
+                                      <input class="btn btn-default btn-login" type="button" value="Login">
+                                    </a>
                                     </form>
                                 </div>
                              </div>
@@ -293,6 +313,7 @@
                             <div class="content registerBox" style="display:none;">
                              <div class="form">
                                 <form method="" html="{:multipart=>true}" data-remote="true" action="" accept-charset="UTF-8">
+                                <input id="name" class="form-control" type="text" placeholder="Name" name="Name">
                                 <input id="email" class="form-control" type="text" placeholder="Email" name="email">
                                 <input id="password" class="form-control" type="password" placeholder="Password" name="password">
                                 <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
@@ -316,12 +337,12 @@
     		      </div>
 		      </div>
 		  </div>
-    </div> 
-<script type="text/javascript">
+    </div>
+<!--script type="text/javascript">
     $(document).ready(function(){
         openLoginModal();
     });
-</script>
+</script-->
 
 
 </body>
